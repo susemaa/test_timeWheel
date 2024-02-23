@@ -11,6 +11,23 @@ export default createGlobalStyle`
 
 	body {
 		font-family: 'Open Sans', sans-serif;
-		line-height: 1.6; // You can set a default line-height for the body text
+		line-height: 1.6;
+		background-color: white;
+	}
+
+	.footer {
+		width: 100%;
+		height: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.swiper {
+    width: 100%;
+    height: 80%;
+  }
+
+	.swiper-slide {
 	}
 `;
