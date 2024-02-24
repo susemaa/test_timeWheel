@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/React';
+import { useGSAP } from '@gsap/react';
 import { Circle, CircleButton, CircleTitle, CircleNumbers } from '../styles';
 import Number from './Number';
 

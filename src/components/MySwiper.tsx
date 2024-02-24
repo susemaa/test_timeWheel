@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/React';
+import { useGSAP } from '@gsap/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";

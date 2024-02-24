@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction, useRef, } from 'react';
 import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/React';
+import { useGSAP } from '@gsap/react';
 import { Circle, CircleButton, CircleTitle1 } from '../styles';
 
 type WheelDate = {
