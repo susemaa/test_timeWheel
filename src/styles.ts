@@ -5,7 +5,7 @@ const lightGrey = '#0F505F';
 const lightBlue = '#4C4EF8';
 const borderGrey = '1px solid rgba(128, 128, 128, 0.33)';
 
-const mobile = `(max-width: 768px)`;
+const mobile = '(max-width: 768px)';
 
 export const Container = styled.div`
 	position: relative;
@@ -44,7 +44,7 @@ export const Container = styled.div`
 		margin-left: 0;
 		border: none;
   }
-`
+`;
 
 export const Circle = styled.div`
   position: absolute;
@@ -59,7 +59,7 @@ export const Circle = styled.div`
 	@media ${mobile} {
     display: none;
   }
-`
+`;
 
 export const CircleButton = styled.button`
 	font-family: 'Rubik', sans-serif;
@@ -82,7 +82,7 @@ export const CircleButton = styled.button`
 		color: ${lightGrey};
 		border: ${borderGrey};
 	}
-`
+`;
 
 export const CircleTitle = styled.div`
   position: absolute;
@@ -93,7 +93,7 @@ export const CircleTitle = styled.div`
 	@media ${mobile} {
     display: none;
   }
-`
+`;
 
 export const CircleNumbers = styled.h1`
 	position: absolute;
@@ -117,7 +117,7 @@ export const CircleNumbers = styled.h1`
 		top: 35%;
 		font-size: 17vw;
   }
-`
+`;
 
 export const Title = styled.h1`
 	margin-top: 10%;
@@ -130,7 +130,7 @@ export const Title = styled.h1`
 		font-size: 1.5em;
 		padding-left: calc(5% + 5px);
   }
-`
+`;
 
 export const SwiperContainer = styled.div`
 	display: flex;
@@ -140,7 +140,7 @@ export const SwiperContainer = styled.div`
 	@media ${mobile} {
 		width: 100%;
   }
-`
+`;
 
 export const SwiperButtonWrapper = styled.div`
 	flex: none;
@@ -148,7 +148,7 @@ export const SwiperButtonWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-`
+`;
 
 export const SwiperButton = styled.button`
 	background-color: white;
@@ -171,12 +171,12 @@ export const SwiperButton = styled.button`
 	@media ${mobile} {
     display: none;
   }
-`
+`;
 
 export const SwiperHeader = styled.h3`
 	color: ${lightBlue};
 	margin: 1em 0;
-`
+`;
 
 export const SwiperTitle = styled.div`
 	padding-left: calc(5% + 5px);
@@ -186,7 +186,7 @@ export const SwiperTitle = styled.div`
 	@media ${mobile} {
     display: block;
   }
-`
+`;
 
 export const Footer = styled.div`
 	width: 100%;
@@ -197,7 +197,7 @@ export const Footer = styled.div`
 	@media ${mobile} {
 		flex-direction: column-reverse;
 	}
-`
+`;
 
 export const NavButton = styled.button`
 	width: 3em;
@@ -225,7 +225,7 @@ export const NavButton = styled.button`
 		width: 24px;
 		height: 24px;
   }
-`
+`;
 
 export const NavButtons = styled.div`
 	display: flex;
@@ -233,11 +233,11 @@ export const NavButtons = styled.div`
 	@media ${mobile} {
 		margin-top: 0.5em;
   }
-`
+`;
 
 export const Navigation = styled.div`
 	padding-left: calc(5% + 5px);
-`
+`;
 
 export const PaginationButton = styled.button<{ isActive: boolean }>`
   width: 0.5em;

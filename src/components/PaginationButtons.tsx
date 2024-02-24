@@ -5,8 +5,7 @@ interface PaginationButtonsProps {
   active: number;
   setActive: Dispatch<SetStateAction<number>>;
   length: number;
-};
-
+}
 
 const PaginationButtons: React.FC<PaginationButtonsProps> = ({ active, setActive, length }) => {
   const buttons = Array.from({ length }, (_, index) => (

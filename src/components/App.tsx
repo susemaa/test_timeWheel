@@ -8,16 +8,21 @@ import { Container, Title } from '../styles';
 import data from '../../sample.json';
 
 const App: React.FC = () => {
-	//fetch instead of destructuring
-	const { sortedDates } = data;
-	const [active, setActive] = useState<number>(0);
-	return (
-		<Container>
-			<Title>Исторические <br /> даты</Title>
-			<RotatingCircle sortedDates={sortedDates} active={active} setActive={setActive}/>
-			<Footer sortedDates={sortedDates} active={active} setActive={setActive}/>
-		</Container>
-	)
+  // fetch instead of destructuring
+  const { sortedDates } = data;
+  const [active, setActive] = useState<number>(0);
+  return (
+    <Container>
+      <Title>
+        Исторические
+        <br />
+        {' '}
+        даты
+      </Title>
+      <RotatingCircle sortedDates={sortedDates} active={active} setActive={setActive} />
+      <Footer sortedDates={sortedDates} active={active} setActive={setActive} />
+    </Container>
+  );
 };
 
 export default App;
