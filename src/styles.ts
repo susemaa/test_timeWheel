@@ -76,6 +76,7 @@ export const CircleButton = styled.button`
   cursor: pointer;
   transition: all 0.3s;
 	z-index: 10;
+	user-select: none;
 	&:hover {
 		width: 4em;
 		height: 4em;
@@ -172,6 +173,7 @@ export const SwiperButton = styled.button`
 	justify-content: center;
 	align-items: center;
 	outline: none;
+	user-select: none;
 	&:disabled {
 		opacity: 0;
 	}
@@ -220,6 +222,7 @@ export const NavButton = styled.button`
 	justify-content: center;
 	align-items: center;
 	margin-right: 1em;
+	user-select: none;
 	&:disabled {
     opacity: 0.3;
     cursor: default;
@@ -256,6 +259,7 @@ export const PaginationButton = styled.button<{ isActive: boolean }>`
   margin: 5px 5px;
   border: none;
   cursor: pointer;
+	user-select: none;
 `;
 
 export const PaginationButtonsContainer = styled.div`
