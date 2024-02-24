@@ -5,9 +5,7 @@ const lightGrey = '#0F505F';
 const lightBlue = '#4C4EF8';
 const borderGrey = '1px solid rgba(128, 128, 128, 0.33)';
 
-const device = {
-	mobile: `(max-width: 768px)`,
-}
+const mobile = `(max-width: 768px)`;
 
 export const Container = styled.div`
 	position: relative;
@@ -24,7 +22,7 @@ export const Container = styled.div`
     background-color: grey;
 		opacity: 0.33;
 		z-index: -2;
-		@media ${device.mobile} {
+		@media ${mobile} {
 			display: none;
 		}
   }
@@ -40,7 +38,7 @@ export const Container = styled.div`
     height: 1px;
     top: 45%;
   }
-	@media ${device.mobile} {
+	@media ${mobile} {
 		width: 100%;
 		height: 100%;
 		margin-left: 0;
@@ -58,7 +56,7 @@ export const Circle = styled.div`
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-	@media ${device.mobile} {
+	@media ${mobile} {
     display: none;
   }
 `
@@ -92,7 +90,7 @@ export const CircleTitle = styled.div`
   left: calc(50% + 33vw / 2 * cos(66deg) + 4em + 1em);
   top: calc(45% - 33vw / 2 * sin(66deg));
   transform: translate(-50%, -50%);
-	@media ${device.mobile} {
+	@media ${mobile} {
     display: none;
   }
 `
@@ -109,12 +107,12 @@ export const CircleNumbers = styled.h1`
 	>span {
 		z-index: -1;
 		padding: 0.5em;
-		@media ${device.mobile} {
+		@media ${mobile} {
 			padding: 5px;
 			letter-spacing: -2px;
 		}
 	}
-	@media ${device.mobile} {
+	@media ${mobile} {
 		left: 50%;
 		top: 35%;
 		font-size: 17vw;
@@ -127,7 +125,7 @@ export const Title = styled.h1`
 	border-left: 5px solid;
 	border-image: linear-gradient(to bottom, #FF56A1, ${lightBlue}) 1;
 	font-size: 2.5em;
-	@media ${device.mobile} {
+	@media ${mobile} {
 		border: none;
 		font-size: 1.5em;
 		padding-left: calc(5% + 5px);
@@ -139,7 +137,7 @@ export const SwiperContainer = styled.div`
   justify-content: space-between;
 	height: 100%;
   align-items: center;
-	@media ${device.mobile} {
+	@media ${mobile} {
 		width: 100%;
   }
 `
@@ -170,7 +168,7 @@ export const SwiperButton = styled.button`
 	&:disabled {
 		opacity: 0;
 	}
-	@media ${device.mobile} {
+	@media ${mobile} {
     display: none;
   }
 `
@@ -185,7 +183,7 @@ export const SwiperTitle = styled.div`
 	padding-bottom: 5%;
 	font-weight: bold;
 	display: none;
-	@media ${device.mobile} {
+	@media ${mobile} {
     display: block;
   }
 `
@@ -196,7 +194,7 @@ export const Footer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	@media ${device.mobile} {
+	@media ${mobile} {
 		flex-direction: column-reverse;
 	}
 `
@@ -222,7 +220,7 @@ export const NavButton = styled.button`
 	&:hover {
 		background-color: white;
 	}
-	@media ${device.mobile} {
+	@media ${mobile} {
 		margin-bottom: 1em;
 		width: 24px;
 		height: 24px;
@@ -232,7 +230,7 @@ export const NavButton = styled.button`
 export const NavButtons = styled.div`
 	display: flex;
 	margin-top: 1em;
-	@media ${device.mobile} {
+	@media ${mobile} {
 		margin-top: 0.5em;
   }
 `
@@ -261,7 +259,7 @@ export const PaginationButtonsContainer = styled.div`
   align-items: center;
   justify-content: center;
 	display: none;
-	@media ${device.mobile} {
+	@media ${mobile} {
 		display: flex;
   }
 `;
