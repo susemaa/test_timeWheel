@@ -21,6 +21,7 @@ export default createGlobalStyle`
     height: 80%;
 		@media (max-width: 768px) {
 			margin-bottom: 4em;
+			border-top: 1px solid rgba(128, 128, 128, 0.33);
 		}
   }
 

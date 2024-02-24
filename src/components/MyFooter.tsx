@@ -28,7 +28,7 @@ const MyFooter: React.FC<FooterProps> = ({ active, setActive, sortedDates }) => 
 				<NavButton
 					disabled={active === 0}
 					onClick={() => setActive(active - 1)}
-					aria-label={`Выбрать ${active - 2} промежуток`}>
+					aria-label={`Выбрать ${active} промежуток`}>
 					<FaAngleLeft size={window.innerWidth > 768 ? '20px' : ''}/>
 				</NavButton>
 				<NavButton

@@ -87,15 +87,13 @@ const RotatingCircle: React.FC<RotatingCircleProps> = ({ sortedDates, active, se
   };
 
   return (
-    <div>
+    <>
       <Circle ref={circleRef}>
         {sortedDates.map((_, index) => (
           <CircleButton
             key={index}
             ref={(el) => buttonsRef.current[index] = el}
-            onClick={() => {
-							setActive(index);
-						}}
+            onClick={() => setActive(index)}
             style={buttonStyle(index)}
 						aria-label={`Выбрать ${index + 1} промежуток`}
           >
@@ -110,7 +108,7 @@ const RotatingCircle: React.FC<RotatingCircleProps> = ({ sortedDates, active, se
 				<Number className={'light-blue'} number={sortedDates[active].start}/>
 				<Number className={'light-pink'} number={sortedDates[active].end}/>
 			</CircleNumbers>
-    </div>
+    </>
   );
 };
 

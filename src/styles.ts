@@ -88,14 +88,12 @@ export const CircleButton = styled.button`
 
 export const CircleTitle = styled.div`
   position: absolute;
+	font-weight: bold;
   left: calc(50% + 33vw / 2 * cos(66deg) + 4em + 1em);
   top: calc(45% - 33vw / 2 * sin(66deg));
   transform: translate(-50%, -50%);
 	@media ${device.mobile} {
-		transform: none;
-		left: calc(5% + 5px);
-		//35 - footerHeight, 10 - borderGap
-		top: calc(100% - 35% - 10% - 2%);
+    display: none;
   }
 `
 
@@ -121,11 +119,6 @@ export const CircleNumbers = styled.h1`
 		top: 35%;
 		font-size: 17vw;
   }
-`
-
-export const CircleTitle1 = styled.div`
-  position: absolute;
-  transform: translate(-50%, -50%);
 `
 
 export const Title = styled.h1`
@@ -187,6 +180,16 @@ export const SwiperHeader = styled.h3`
 	margin: 1em 0;
 `
 
+export const SwiperTitle = styled.div`
+	padding-left: calc(5% + 5px);
+	padding-bottom: 5%;
+	font-weight: bold;
+	display: none;
+	@media ${device.mobile} {
+    display: block;
+  }
+`
+
 export const Footer = styled.div`
 	width: 100%;
 	height: 35%;
@@ -195,18 +198,6 @@ export const Footer = styled.div`
 	justify-content: space-between;
 	@media ${device.mobile} {
 		flex-direction: column-reverse;
-		position: relative;
-		&:after {
-			content: '';
-			position: absolute;
-			top: -15%;
-			height: 1px;
-			background-color: rgba(128, 128, 128, 0.33);
-		}
-		&:after {
-			left: calc(5% + 5px);
-			right: calc(5% + 5px);
-		}
 	}
 `
 
