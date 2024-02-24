@@ -14,7 +14,7 @@ const PaginationButtons: React.FC<PaginationButtonsProps> = ({ active, setActive
       key={`pagination${index}`}
       isActive={index === active}
       onClick={() => setActive(index)}
-      aria-label={`Выбрать слайд номер ${index + 1}`}
+      aria-label={`Выбрать промежуток номер ${index + 1}`}
     />
   ));
 

@@ -25,10 +25,16 @@ const MyFooter: React.FC<FooterProps> = ({ active, setActive, sortedDates }) => 
 		<Navigation>
 			{`0${active + 1}/0${sortedDates.length}`}
 			<NavButtons>
-				<NavButton disabled={active === 0} onClick={() => setActive(active - 1)}>
+				<NavButton
+					disabled={active === 0}
+					onClick={() => setActive(active - 1)}
+					aria-label={`Выбрать ${active - 2} промежуток`}>
 					<FaAngleLeft size={window.innerWidth > 768 ? '20px' : ''}/>
 				</NavButton>
-				<NavButton disabled={active === sortedDates.length - 1} onClick={() => setActive(active + 1 )}>
+				<NavButton
+					disabled={active === sortedDates.length - 1}
+					onClick={() => setActive(active + 1 )}
+					aria-label={`Выбрать ${active + 2} промежуток`}>
 					<FaAngleRight size={window.innerWidth > 768 ? '20px' : ''}/>
 				</NavButton>
 			</NavButtons>

@@ -97,6 +97,7 @@ const RotatingCircle: React.FC<RotatingCircleProps> = ({ sortedDates, active, se
 							setActive(index);
 						}}
             style={buttonStyle(index)}
+						aria-label={`Выбрать ${index + 1} промежуток`}
           >
             {index + 1}
           </CircleButton>
