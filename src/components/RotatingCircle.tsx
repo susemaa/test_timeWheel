@@ -3,17 +3,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Circle, CircleButton, CircleTitle, CircleNumbers } from '../styles';
 import Number from './Number';
-
-type WheelDate = {
-	start: number;
-    end: number;
-    title: string;
-    dates: {
-        year: number;
-        description: string;
-    }[];
-}
-
+import { WheelDate } from '../types';
 interface RotatingCircleProps {
 	active: number;
 	setActive: Dispatch<SetStateAction<number>>;

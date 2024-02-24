@@ -5,18 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { SwiperButton, SwiperContainer, SwiperHeader, SwiperButtonWrapper, SwiperTitle } from '../styles';
-
-type Dates = {
-	year: number,
-	description: string,
-}
-
-type WheelDate = {
-	start: number;
-    end: number;
-    title: string;
-    dates: Array<Dates>;
-}
+import { Dates, WheelDate } from '../types';
 
 interface SwiperProps {
 	sortedDates: WheelDate[];

@@ -3,16 +3,7 @@ import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import MySwiper from './MySwiper';
 import PaginationButtons from './PaginationButtons';
 import { Footer, Navigation, NavButton, NavButtons } from '../styles';
-
-type WheelDate = {
-	start: number;
-    end: number;
-    title: string;
-    dates: {
-        year: number;
-        description: string;
-    }[];
-}
+import { WheelDate } from '../types';
 
 interface FooterProps {
 	active: number;
