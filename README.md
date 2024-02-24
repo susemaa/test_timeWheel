@@ -1,6 +1,6 @@
 ## Deploy
 
-Open [vercel deploy](https://test-time-wheel.vercel.app/) to see the result.
+Click [here](https://test-time-wheel.vercel.app/) to see the result.
 
 ## Getting Started
 
