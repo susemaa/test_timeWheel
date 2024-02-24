@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react';
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import MySwiper from './MySwiper';
 import PaginationButtons from './PaginationButtons';
 import { Footer, Navigation, NavButton, NavButtons } from '../styles';
@@ -26,10 +26,10 @@ const MyFooter: React.FC<FooterProps> = ({ active, setActive, sortedDates }) => 
 			{`0${active + 1}/0${sortedDates.length}`}
 			<NavButtons>
 				<NavButton disabled={active === 0} onClick={() => setActive(active - 1)}>
-					<FaAngleLeft />
+					<FaAngleLeft size={window.innerWidth > 768 ? '20px' : ''}/>
 				</NavButton>
 				<NavButton disabled={active === sortedDates.length - 1} onClick={() => setActive(active + 1 )}>
-					<FaAngleRight />
+					<FaAngleRight size={window.innerWidth > 768 ? '20px' : ''}/>
 				</NavButton>
 			</NavButtons>
 			<PaginationButtons active={active} setActive={setActive} length={sortedDates.length} />
