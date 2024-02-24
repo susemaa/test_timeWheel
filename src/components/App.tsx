@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Footer from './Footer';
+import Footer from './MyFooter';
 import RotatingCircle from './RotatingCircle';
 
 import { Container, Title } from '../styles';

@@ -10,23 +10,28 @@ export default createGlobalStyle`
 	}
 
 	body {
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Rubik', sans-serif;
 		line-height: 1.6;
-		background-color: white;
-	}
-
-	.footer {
-		width: 100%;
-		height: 30%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		background-color: #F4F5F9;
+		color: #0F505F;
 	}
 
 	.swiper {
     width: 100%;
     height: 80%;
+		@media (max-width: 768px) {
+			margin-bottom: 4em;
+		}
   }
+
+
+	.light-blue {
+		color: #4C4EF8;
+	}
+
+	.light-pink {
+		color: #FF56A1;
+	}
 
 	.swiper-slide {
 	}

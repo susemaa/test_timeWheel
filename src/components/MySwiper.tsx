@@ -3,7 +3,8 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/React';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import { SwiperButton, SwiperContainer, SwiperHeader } from '../styles';
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import { SwiperButton, SwiperContainer, SwiperHeader, SwiperButtonWrapper } from '../styles';
 
 type WheelDate = {
 	start: number;
@@ -53,17 +54,24 @@ const MySwiper: React.FC<SwiperProps> = ({ sortedDates, active }) => {
 
 	return (
 	<SwiperContainer ref={swiperRef}>
-		<SwiperButton id='prev-button'>
-			&lt;
-		</SwiperButton>
+		<SwiperButtonWrapper>
+			<SwiperButton id='prev-button'>
+				<FaAngleLeft />
+			</SwiperButton>
+		</SwiperButtonWrapper>
 		<Swiper
 			navigation={{
 				nextEl: '#next-button',
 				prevEl: '#prev-button',
 			}}
 			modules={[Navigation]}
-			slidesPerView={3}
+			slidesPerView={1.5}
 			spaceBetween={15}
+			breakpoints={{
+				768: {
+					slidesPerView: 3,
+				},
+			}}
 			className='swiper'>
 			{activeDates?.map((date, index) => (
 				<SwiperSlide
@@ -76,9 +84,11 @@ const MySwiper: React.FC<SwiperProps> = ({ sortedDates, active }) => {
 				</SwiperSlide>
 			))}
 		</Swiper>
-		<SwiperButton id='next-button'>
-			&gt;
-		</SwiperButton>
+		<SwiperButtonWrapper>
+			<SwiperButton id='next-button'>
+				<FaAngleRight />
+			</SwiperButton>
+		</SwiperButtonWrapper>
 	</SwiperContainer>
 	)
 };

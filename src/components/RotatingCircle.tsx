@@ -1,7 +1,8 @@
 import React, { Dispatch, SetStateAction, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/React';
-import { Circle, CircleButton, CircleTitle } from '../styles';
+import { Circle, CircleButton, CircleTitle, CircleNumbers } from '../styles';
+import Number from './Number';
 
 type WheelDate = {
 	start: number;
@@ -28,6 +29,7 @@ const RotatingCircle: React.FC<RotatingCircleProps> = ({ sortedDates, active, se
   const { contextSafe } = useGSAP({ scope: circleRef });
 
 	useGSAP(() => {
+		rotateCircle(active);
 		gsap.to(titleRef.current, {
 			opacity: 1,
 			delay: 1.5,
@@ -70,9 +72,9 @@ const RotatingCircle: React.FC<RotatingCircleProps> = ({ sortedDates, active, se
 			? {
 				width: '4em',
 				height: '4em',
-				backgroundColor: 'white',
-				color: 'black',
-				border: '1px solid black',
+				backgroundColor: '#F4F5F9',
+				color: '#0F505F',
+				border: '1px solid rgba(128, 128, 128, 0.33)',
 				top: `${50 + diameter * Math.sin((angle * Math.PI) / 180)}%`,
       	left: `${50 + diameter * Math.cos((angle * Math.PI) / 180)}%`,
       	transform: 'translate(-50%, -50%)',
@@ -92,7 +94,6 @@ const RotatingCircle: React.FC<RotatingCircleProps> = ({ sortedDates, active, se
             key={index}
             ref={(el) => buttonsRef.current[index] = el}
             onClick={() => {
-							rotateCircle(index);
 							setActive(index);
 						}}
             style={buttonStyle(index)}
@@ -104,6 +105,10 @@ const RotatingCircle: React.FC<RotatingCircleProps> = ({ sortedDates, active, se
 			<CircleTitle ref={titleRef}>
         {activeTitle}
       </CircleTitle>
+			<CircleNumbers>
+				<Number className={'light-blue'} number={sortedDates[active].start}/>
+				<Number className={'light-pink'} number={sortedDates[active].end}/>
+			</CircleNumbers>
     </div>
   );
 };

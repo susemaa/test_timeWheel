@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/React';
 
 interface NumberProps {
   number: number;
+	className?: string;
 }
 
 const myObject = {
   totalValue: 0
 };
 
-const Number: React.FC<NumberProps> = ({ number }) => {
+const Number: React.FC<NumberProps> = ({ number, className }) => {
   const [total, setTotal] = useState<number>(number);
 
   useGSAP(() => {
     gsap.to(myObject, {
-      duration: 0.5,
+      duration: 1.5,
       totalValue: number,
       roundProps: "totalValue",
       onUpdate: () => {
@@ -25,11 +26,9 @@ const Number: React.FC<NumberProps> = ({ number }) => {
   }, { dependencies: [number] });
 
   return (
-    <div className="row justify-content-center">
-      <div className="col-12 col-md-6 alert alert-dark text-center">
-        {total}
-      </div>
-    </div>
+    <span className={className}>
+			{total}
+    </span>
   );
 };
 
